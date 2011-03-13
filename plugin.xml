@@ -1,0 +1,20 @@
+<plugin name='disqus' version='0.1' grailsVersion='1.3.7 &gt; *'>
+  <author>Edvinas Bartkus</author>
+  <authorEmail>edvinas@geeks.lt</authorEmail>
+  <title>Embed Disqus system into your application</title>
+  <description>\
+To simplify the usage of Disqus you can use this plugin. Simple add disqus tag into the pages
+where you want to allow users to comment stuff.
+</description>
+  <documentation>http://grails.org/plugin/disqus</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>DefaultDisqusConfig</resource>
+    <resource>UrlMappings</resource>
+    <resource>org.geeks.plugins.DisqusTagLib</resource>
+  </resources>
+  <dependencies />
+  <behavior />
+</plugin>
