@@ -14,7 +14,9 @@ class DisqusTagLib {
     }
 
     def identifier
-    if(settings.identifier instanceof Closure) {
+    if(attrs.identifier) {
+      identifier = attrs.identifier
+    } else if(settings.identifier instanceof Closure) {
       identifier = settings.identifier(attrs.bean)
     } else if(attrs.bean) {
       def bean = attrs.bean
@@ -23,7 +25,9 @@ class DisqusTagLib {
       identifier = "${name}#${id}"
     }
     def url
-    if(settings.url instanceof Closure) {
+    if(attrs.url) {
+      url = attrs.url
+    } else if(settings.url instanceof Closure) {
       url = settings.url()
     } else {
       url = request.getRequestURL()
